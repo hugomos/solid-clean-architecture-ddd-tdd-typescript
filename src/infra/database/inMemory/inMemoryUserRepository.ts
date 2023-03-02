@@ -1,6 +1,6 @@
-import { IUserDTO } from '../../../domain/dtos/IUserDTO'
-import { User } from '../../../domain/entities/User'
-import { IUserRepository } from '../../../domain/repositories/IUserRepository'
+import { IUserDTO } from '../../../modules/user/domain/dtos/IUserDTO'
+import { User } from '../../../modules/user/domain/entities/User'
+import { IUserRepository } from '../../../modules/user/domain/repositories/IUserRepository'
 
 export class InMemoryUserRepository implements IUserRepository {
   private users: User[] = []

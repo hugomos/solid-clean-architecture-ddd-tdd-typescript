@@ -1,6 +1,6 @@
-import { IUserDTO } from '../../domain/dtos/IUserDTO'
-import { IUserRepository } from '../../domain/repositories/IUserRepository'
-import { ICreateUserUseCase } from '../../domain/useCases/ICreateUserUseCase'
+import { IUserDTO } from '../../../domain/dtos/IUserDTO'
+import { IUserRepository } from '../../../domain/repositories/IUserRepository'
+import { ICreateUserUseCase } from '../../../domain/useCases/ICreateUserUseCase'
 
 export class CreateUserUseCase extends ICreateUserUseCase {
   constructor(userRepository: IUserRepository) {

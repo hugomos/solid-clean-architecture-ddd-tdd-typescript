@@ -1,6 +1,6 @@
-import { IUserDTO } from 'modules/user/domain/dtos/IUserDTO'
-import { User } from 'modules/user/domain/entities/User'
-import { IUserRepository } from 'modules/user/domain/repositories/IUserRepository'
+import { IUserDTO } from '../../../modules/user/domain/dtos/IUserDTO'
+import { User } from '../../../modules/user/domain/entities/User'
+import { IUserRepository } from '../../../modules/user/domain/repositories/IUserRepository'
 
 export class InMemoryUserRepository implements IUserRepository {
   private users: User[] = []
@@ -20,12 +20,12 @@ export class InMemoryUserRepository implements IUserRepository {
   }
 
   async findById(id: string): Promise<IUserDTO | null> {
-    const user = this.users.find(user => user.id === id)
+    const user = this.users.filter(user => user.id === id)[0]
     return user || null
   }
 
   async findByEmail(email: string): Promise<IUserDTO | null> {
-    const user = this.users.find(user => user.email === email)
+    const user = this.users.filter(user => user.email === email)[0]
     return user || null
   }
 }

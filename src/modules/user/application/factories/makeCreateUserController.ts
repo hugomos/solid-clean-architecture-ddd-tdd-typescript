@@ -1,4 +1,4 @@
-import { InMemoryUserRepository } from 'infra/database/inMemory/inMemoryUserRepository'
+import { InMemoryUserRepository } from '../../../../infra/database/inMemory/inMemoryUserRepository'
 import { CreateUserController } from '../useCases/createUser/CreateUserController'
 import { CreateUserUseCase } from '../useCases/createUser/CreateUserUseCase'
 
